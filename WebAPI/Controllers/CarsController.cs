@@ -24,7 +24,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("add")]
-        public IActionResult Add([FromBody]Car car)
+        public IActionResult Add([FromBody] Car car)
         {
             var result = _carService.Add(car);
             if (result.Success)
@@ -133,6 +133,8 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+
+
         [HttpGet("getallcardetails")]
         public IActionResult GetAllCarDetails()
         {
@@ -144,6 +146,7 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
+   
         [HttpGet("getallcardetailsbyfilter")]
         public IActionResult GetAllCarDetailsByFilter(int brandId, int colorId)
         {
@@ -154,5 +157,6 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+
     }
 }
