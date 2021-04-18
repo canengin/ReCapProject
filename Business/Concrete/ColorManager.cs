@@ -23,19 +23,19 @@ namespace Business.Concrete
         public IResult Add(Color entity)
         {
             _colorDal.Add(entity);
-            return new SuccessResult("Color" + Messages.AddSingular);
+            return new SuccessResult("Renk" + Messages.AddSingular);
         }
 
         public IResult Update(Color entity)
         {
             _colorDal.Update(entity);
-            return new SuccessResult("Color" + Messages.UpdateSingular);
+            return new SuccessResult("Renk" + Messages.UpdateSingular);
         }
 
         public IResult Delete(Color entity)
         {
             _colorDal.Delete(entity);
-            return new SuccessResult("Color" + Messages.DeleteSingular);
+            return new SuccessResult("Renk" + Messages.DeleteSingular);
         }
 
         public IDataResult<Color> Get(Color entity)

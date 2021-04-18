@@ -23,19 +23,19 @@ namespace Business.Concrete
         public IResult Add(Brand entity)
         {
             _brandDal.Add(entity);
-            return new SuccessResult("Brand" + Messages.AddSingular);
+            return new SuccessResult("Marka" + Messages.AddSingular);
         }
 
         public IResult Update(Brand entity)
         {
             _brandDal.Update(entity);
-            return new SuccessResult("Brand" + Messages.UpdateSingular);
+            return new SuccessResult("Marka" + Messages.UpdateSingular);
         }
 
         public IResult Delete(Brand entity)
         {
             _brandDal.Delete(entity);
-            return new SuccessResult("Brand" + Messages.DeleteSingular);
+            return new SuccessResult("Marka" + Messages.DeleteSingular);
         }
 
         public IDataResult<Brand> Get(Brand entity)

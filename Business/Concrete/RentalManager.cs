@@ -28,19 +28,19 @@ namespace Business.Concrete
         public IResult Add(Rental entity)
         {
             _rentalDal.Add(entity);
-            return new SuccessResult("Rental" + Messages.AddSingular);
+            return new SuccessResult("Kiralama" + Messages.AddSingular);
         }
 
         public IResult Update(Rental entity)
         {
             _rentalDal.Update(entity);
-            return new SuccessResult("Rental" + Messages.UpdateSingular);
+            return new SuccessResult("Kiralama" + Messages.UpdateSingular);
         }
 
         public IResult Delete(Rental entity)
         {
             _rentalDal.Delete(entity);
-            return new SuccessResult("Rental" + Messages.DeleteSingular);
+            return new SuccessResult("Kiralama" + Messages.DeleteSingular);
         }
 
         public IDataResult<Rental> Get(Rental entity)
@@ -65,7 +65,7 @@ namespace Business.Concrete
             {
                 r = _rentalDal.GetAll().FirstOrDefault(x => x.ID == Id);
             }
-            else Console.WriteLine(Messages.NotExist + "rental");
+            else Console.WriteLine(Messages.NotExist + "Kiralama");
             return new SuccessDataResult<Rental>(r);
         }
 

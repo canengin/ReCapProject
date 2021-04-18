@@ -38,7 +38,7 @@ namespace Business.Concrete
             img.ImagePath = FileOperationsHelper.Add(image);
             img.CreatedAt = DateTime.Now;            
             _carImageDal.Add(img);
-            return new SuccessResult("Image" + Messages.AddSingular);
+            return new SuccessResult("Resim" + Messages.AddSingular);
         }
 
         public IResult Update(IFormFile image, CarImage img)
@@ -54,7 +54,7 @@ namespace Business.Concrete
             carImg.ImagePath = FileOperationsHelper.Add(image);
             FileOperationsHelper.Delete(img.ImagePath);
             _carImageDal.Update(carImg);
-            return new SuccessResult("Image" + Messages.UpdateSingular);
+            return new SuccessResult("Resim" + Messages.UpdateSingular);
         }
 
         public IResult Delete(CarImage img)
@@ -67,7 +67,7 @@ namespace Business.Concrete
             
             _carImageDal.Delete(img);
             FileOperationsHelper.Delete(img.ImagePath);
-            return new SuccessResult("Image" + Messages.DeleteSingular);
+            return new SuccessResult("Resim" + Messages.DeleteSingular);
         }
 
         public IDataResult<CarImage> FindByID(int Id)
@@ -142,7 +142,7 @@ namespace Business.Concrete
         {
             if (!_carImageDal.GetAll().Any(x => x.ImagePath == path))
             {
-                return new ErrorResult(Messages.NotExist + "image");
+                return new ErrorResult(Messages.NotExist + "Resim");
             }
 
             return new SuccessResult();
@@ -161,7 +161,7 @@ namespace Business.Concrete
         {
             if (!_carImageDal.GetAll().Any(x => x.ID == Id))
             {
-                return new ErrorResult(Messages.NotExist + "image");
+                return new ErrorResult(Messages.NotExist + "Resim");
             }
             return new SuccessResult();
         }

@@ -27,19 +27,19 @@ namespace Business.Concrete
         public IResult Add(User entity)
         {
             _userDal.Add(entity);
-            return new SuccessResult("User" + Messages.AddSingular);
+            return new SuccessResult("Kullanıcı" + Messages.AddSingular);
         }
 
         public IResult Update(User entity)
         {
             _userDal.Update(entity);
-            return new SuccessResult("User" + Messages.UpdateSingular);
+            return new SuccessResult("Kullanıcı" + Messages.UpdateSingular);
         }
 
         public IResult Delete(User entity)
         {
             _userDal.Delete(entity);
-            return new SuccessResult("User" + Messages.DeleteSingular);
+            return new SuccessResult("Kullanıcı" + Messages.DeleteSingular);
         }
 
         public IDataResult<User> Get(User entity)
@@ -64,7 +64,7 @@ namespace Business.Concrete
             {
                 u = _userDal.GetAll().FirstOrDefault(x => x.ID == Id);
             }
-            else Console.WriteLine(Messages.NotExist + "user");
+            else Console.WriteLine(Messages.NotExist + "Kullanıcı");
             return new SuccessDataResult<User>(u);
         }
 

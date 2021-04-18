@@ -35,20 +35,20 @@ namespace Business.Concrete
         public IResult Add(Car entity)
         {
             _carDal.Add(entity);
-            return new SuccessResult("Car" + Messages.AddSingular);
+            return new SuccessResult("Araba" + Messages.AddSingular);
         }
 
         [CacheRemoveAspect("ICarService.Get")]
         public IResult Update(Car entity)
         {
             _carDal.Update(entity);
-            return new SuccessResult("Car" + Messages.UpdateSingular);
+            return new SuccessResult("Araba" + Messages.UpdateSingular);
         }
 
         public IResult Delete(Car entity)
         {
             _carDal.Delete(entity);
-            return new SuccessResult("Car" + Messages.DeleteSingular);
+            return new SuccessResult("Araba" + Messages.DeleteSingular);
         }
 
         public IDataResult<Car> Get(Car entity)

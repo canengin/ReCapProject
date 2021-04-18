@@ -29,19 +29,19 @@ namespace Business.Concrete
         public IResult Add(Customer entity)
         {
             _customerDal.Add(entity);
-            return new SuccessResult("Customer" + Messages.AddSingular);
+            return new SuccessResult("Müşteri" + Messages.AddSingular);
         }
 
         public IResult Update(Customer entity)
         {
             _customerDal.Update(entity);
-            return new SuccessResult("Customer" + Messages.UpdateSingular);
+            return new SuccessResult("Müşteri" + Messages.UpdateSingular);
         }
 
         public IResult Delete(Customer entity)
         {
             _customerDal.Delete(entity);
-            return new SuccessResult("Customer" + Messages.DeleteSingular);
+            return new SuccessResult("Müşteri" + Messages.DeleteSingular);
         }
 
         public IDataResult<Customer> Get(Customer entity)
@@ -68,7 +68,7 @@ namespace Business.Concrete
             {
                 c = _customerDal.GetAll().FirstOrDefault(x => x.UserID== Id);
             }
-            else Console.WriteLine(Messages.NotExist + "Customer");
+            else Console.WriteLine(Messages.NotExist + "Müşteri");
             return new SuccessDataResult<Customer>(c);
         }
 

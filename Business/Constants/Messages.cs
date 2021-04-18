@@ -10,26 +10,26 @@ namespace Business.Constants
 {
     public static class Messages
     {
-        public static string AddSingular = " has been added.";
-        public static string UpdateSingular = " has been updated.";
-        public static string DeleteSingular = " has been deleted.";
-        public static string CarNameValidation = "The value entered must be at least 2 characters.";
-        public static string PriceValidation = "Please enter a value greater than 0.";
-        public static string NotExist = "There is no such a ";
-        public static string AlreadyExist = " is already exists.";
-        public static string RentSuccess = "Car rental has been successfully completed.";
-        public static string ReturnSuccess = "Car delivery has been successfully completed.";
-        public static string InvalidName = "Name must contain at least two characters.";
-        public static string InvalidPrice = "Daily Price must be greater than 0.";
-        public static string InvalidFileExtension = "Invalid file extension.";
-        public static string ImageNumberLimitExceeded = "The image limit for this car is full and new images cannot be added.";
+        public static string AddSingular = " eklendi.";
+        public static string UpdateSingular = " Güncellendi";
+        public static string DeleteSingular = " silindi.";
+        public static string CarNameValidation = "En az 2 karakter girilmelidir..";
+        public static string PriceValidation = "Girdiğiniz değer 0'dan büyük olmak zorunda";
+        public static string NotExist = "Bulunamadı ";
+        public static string AlreadyExist = "Zaten var";
+        public static string RentSuccess = "Araç kiralama başarılı";
+        public static string ReturnSuccess = "Araç iade gerçekleşti";
+        public static string InvalidName = "İsim en az 2 harften oluşmalı";
+        public static string InvalidPrice = "Fiyat 0'dan büyük bir değer olmalı";
+        public static string InvalidFileExtension = "Geçersiz dosya ";
+        public static string ImageNumberLimitExceeded = "Araç için resim limiti dolmuştur.Daha fazla ekleyemessiniz";
 
-        public static string AuthorizationDenied = "Authorization Denied.";
-        public static string AccessTokenCreated = "Access Token has been created.";
-        public static string UserAlreadyExists = "User is already exists.";
-        public static string SuccessfulLogin = "Login successful.";
-        public static string PasswordError = "Incorrect password.";
-        public static string UserNotFound = "User was not found";
-        public static string UserRegistered = "User has been registered.";
+        public static string AuthorizationDenied = "Yetkilendirme Reddedildi.";
+        public static string AccessTokenCreated = "Access Token oluşturuldu";
+        public static string UserAlreadyExists = "Kullanıcı zaten var.";
+        public static string SuccessfulLogin = "Giriş Başarılı";
+        public static string PasswordError = "Parola Hatalı.";
+        public static string UserNotFound = "Kullanıcı Bulunamadı";
+        public static string UserRegistered = "Kayıt olundu.";
     }
 }
